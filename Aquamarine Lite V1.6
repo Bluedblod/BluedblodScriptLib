@@ -1,0 +1,609 @@
+local plr = game.Players.LocalPlayer.PlayerGui
+local plrrr = game.Players.LocalPlayer
+
+local font = Enum.Font.Sarpanch
+local scriptext = nil
+local GothamChess = "GothamSemibold"
+
+local plrrr = game.Players.LocalPlayer
+local character = plrrr.Character or plrrr.CharacterAdded:Wait()
+
+local character = plrrr.Character or plrrr.CharacterAdded:Wait()
+
+local AquamarineHub = Instance.new("ScreenGui")
+AquamarineHub.ResetOnSpawn = false
+AquamarineHub.Name = "AquamarineHub"
+AquamarineHub.Parent = plr
+AquamarineHub.Enabled = true
+print("Aquamarine Hub starting..")
+plrrr.CharacterRemoving:Connect(function()
+	AquamarineHub:Destroy()
+end)
+wait(0.05)
+local Client = Instance.new("Frame")
+Client.Parent = AquamarineHub
+Client.Visible = true
+Client.Name = "Client"
+Client.Position = UDim2.new(0, 0,0.294, 0)
+Client.Size = UDim2.new(0, 120, 0, 149)
+Client.BackgroundColor3 = Color3.new(0.227451, 0.227451, 0.227451)
+print("ClientFrame Loaded..")
+wait(0.05)
+local AquamarinLiteLoad = Instance.new("Frame")
+AquamarinLiteLoad.Name = "AquaLoad"
+AquamarinLiteLoad.Position = UDim2.new(-1.061, 0, -0.0666, 0)
+AquamarinLiteLoad.Size = UDim2.new(0, 256, 0, 168)
+AquamarinLiteLoad.BackgroundColor3 = Color3.new(0.235294, 0.247059, 1)
+AquamarinLiteLoad.ZIndex = Client.ZIndex + 1
+AquamarinLiteLoad.Transparency = 0
+AquamarinLiteLoad.Parent = Client
+
+print("created loading")
+local icorn = Instance.new("UICorner")
+icorn.CornerRadius = UDim.new(0, 8)
+icorn.Name = "ScaleSettingggg"
+icorn.Parent = AquamarinLiteLoad
+print("created ui curves")
+local AquamarineLiteHandle = Instance.new("TextLabel")
+AquamarineLiteHandle.Position = UDim2.new(0.109, 0, 0.143, 0)
+AquamarineLiteHandle.Name = "AquamarineLiteHandle"
+AquamarineLiteHandle.Size = UDim2.new(0, 200, 0 ,50)
+AquamarineLiteHandle.Visible = true
+local TextLabel11 = AquamarineLiteHandle
+TextLabel11.Font = font
+AquamarineLiteHandle.TextScaled = true
+AquamarineLiteHandle.Text = "Aquamarine Lite"
+AquamarineLiteHandle.BackgroundTransparency = 1
+AquamarineLiteHandle.ZIndex = AquamarinLiteLoad.ZIndex + 1
+AquamarineLiteHandle.Parent = AquamarinLiteLoad
+
+local AquamarineLiteHandle2 = Instance.new("TextLabel")
+AquamarineLiteHandle2.Position = UDim2.new(0.109, 0, 0.679, 0)
+AquamarineLiteHandle2.Name = "AquamarineLiteHandle"
+AquamarineLiteHandle2.Size = UDim2.new(0, 200, 0 ,50)
+AquamarineLiteHandle2.Visible = true
+local TextLabel12 = AquamarineLiteHandle2
+TextLabel12.Font = font
+AquamarineLiteHandle2.TextScaled = false
+AquamarineLiteHandle2.BackgroundTransparency = 1
+AquamarineLiteHandle2.TextScaled = false
+AquamarineLiteHandle2.TextSize = 16
+AquamarineLiteHandle2.Text = "Loading..."
+AquamarineLiteHandle2.ZIndex = AquamarinLiteLoad.ZIndex + 1
+AquamarineLiteHandle2.Parent = AquamarinLiteLoad
+
+wait(0.05)
+local CornerSetting = Instance.new("UICorner")
+CornerSetting.Parent = Client
+CornerSetting.Name = "CornerSetting"
+CornerSetting.CornerRadius = UDim.new(0, 4)
+print("CornerSetting Loaded..")
+wait(0.05)
+
+local ScaleSetting = Instance.new("UIScale")
+ScaleSetting.Parent = Client
+ScaleSetting.Name = "ScaleSetting"
+ScaleSetting.Scale = 1
+print("ScaleSetting Loaded..")
+wait(0.05)
+
+local Creds = Instance.new("Frame")
+Creds.Parent = Client
+Creds.Name = "Creds"
+Creds.Visible = true
+Creds.Position = UDim2.new(-1.006, 0, -0.001, 0)
+Creds.Size = UDim2.new(0, 120, 0, 149)
+Creds.BackgroundColor3 = Color3.new(0.227451, 0.227451, 0.227451)
+print("ClientFrame Loaded..")
+wait(0.05)
+
+local CornerSetting1 = Instance.new("UICorner")
+CornerSetting1.Parent = Creds
+CornerSetting1.Name = "CornerSetting1"
+CornerSetting1.CornerRadius = UDim.new(0, 4)
+wait(0.05)
+local ScaleSetting1 = Instance.new("UIScale")
+ScaleSetting1.Parent = Creds
+ScaleSetting1.Name = "ScaleSetting1"
+ScaleSetting1.Scale = 1
+wait(0.05)
+local Closee = Instance.new("TextButton")
+Closee.Name = "Closee"
+Closee.Parent = Creds
+Closee.Visible = true
+Closee.Position = UDim2.new(0.867, 0, 0, 0)
+Closee.Size = UDim2.new(0, 16, 0, 15)
+local Textlabel2 = Closee
+Textlabel2.Font = font
+Closee.Text = "X"
+Closee.TextColor3 = Color3.new(0, 0, 0)
+Closee.TextScaled = true
+local backgroundColor2 = BrickColor.new(Color3.fromHSV(0.572028, 0.635294, 1))
+Closee.BackgroundColor = backgroundColor2
+Closee.BackgroundColor3 = Color3.new(0.364706, 0.737255, 1)
+Closee.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+Closee.BorderSizePixel = 1
+Closee.MouseButton1Click:Connect(function()
+	Closee.Parent.Visible = false
+end)
+wait(0.05)
+local CT = Instance.new("TextLabel")
+CT.Parent = Creds
+CT.Visible = true
+CT.Name = "CT"
+CT.Position = UDim2.new(0.141, 0, 0.168, 0)
+CT.Size = UDim2.new(0, 89, 0, 115)
+CT.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+CT.BorderSizePixel = 2
+CT.BackgroundColor3 = Color3.new(0.345098, 0.411765, 1)
+local backgroundColor3 = BrickColor.new(Color3.fromHSV(0.649694, 0.654902, 1))
+CT.BackgroundColor = backgroundColor3
+CT.TextColor3 = Color3.new(0, 0, 0)
+local Textlabel1 = CT
+Textlabel1.Font = font
+CT.Text = "This is the Lite version of Aquamarine Hub. This is still development and was made by Bluedblod. Buy Aquamarine Hub V2 for 1$. Add Bluedblod#1388 on discord if you have any problems/questions."
+CT.BorderSizePixel = 2
+CT.TextScaled = true
+wait(0.05)
+local Title2 = Instance.new("TextLabel")
+Title2.Parent = Creds
+Title2.Visible = true
+Title2.Name = "Title2"
+Title2.Position = UDim2.new(-0.001, 0, 0, 0)
+Title2.Size = UDim2.new(0, 85, 0, 15)
+local backgroundColor4 = BrickColor.new(Color3.fromHSV(0.672389, 0.8, 1))
+Title2.BackgroundColor = backgroundColor4
+Title2.BackgroundColor3 = Color3.new(0.227451, 0.2, 1)
+Title2.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+Title2.BorderSizePixel = 2
+local Textlabel3 = Title2
+Textlabel3.Font = font
+Title2.TextColor3 = Color3.new(0, 0, 0)
+Title2.Text = "Credits & more Scripts"
+Title2.BorderSizePixel = 2
+Title2.TextScaled = true
+wait(0.05)
+local SFrame = Instance.new("ScrollingFrame")
+SFrame.Parent = Client
+SFrame.Visible = true
+SFrame.Name = "SFrame"
+SFrame.Position = UDim2.new(0.097, 0, 0.168, 0)
+SFrame.Size = UDim2.new(0, 100, 0, 116)
+local backgroundColor5 = BrickColor.new(Color3.fromHSV(0, 0, 0.32549))
+SFrame.BackgroundColor = backgroundColor5
+SFrame.BackgroundColor3 = Color3.new(0.32549, 0.32549, 0.32549)
+SFrame.ScrollBarImageColor3 = Color3.new(0, 0, 0)
+SFrame.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+SFrame.BorderSizePixel = 1
+SFrame.CanvasSize = UDim2.new(0, 0, 2, 0)
+wait(0.05)
+local folder = Instance.new("Folder")
+folder.Name = "EXE"
+folder.Parent = AquamarineHub:WaitForChild("Client")
+
+local ObservationEX = Instance.new("Frame")
+ObservationEX.Visible = false
+ObservationEX.Name = "ObservationEx"
+ObservationEX.BackgroundColor3 = Color3.new(0.227451, 0.227451, 0.227451)
+ObservationEX.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+ObservationEX.Position = UDim2.new(1.02, 0, 0.099, 0)
+ObservationEX.Size = UDim2.new(0, 141, 0, 114)
+ObservationEX.Parent = AquamarineHub:FindFirstChild("EXE")
+
+local closeeeeee = Instance.new("TextButton")
+closeeeeee.Visible = false
+closeeeeee.Name = "close1"
+closeeeeee.BackgroundColor3 = Color3.new(0.364706, 0.72549, 1)
+closeeeeee.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+closeeeeee.BorderSizePixel = 1
+closeeeeee.Parent = ObservationEX
+
+local CornerSetting2 = Instance.new("UICorner")
+CornerSetting2.Parent = ObservationEX
+CornerSetting2.Name = "CornerSetting2"
+CornerSetting2.CornerRadius = UDim.new(0, 4)
+wait(0.05)
+local ScaleSetting2 = Instance.new("UIScale")
+ScaleSetting2.Parent = ObservationEX
+ScaleSetting2.Name = "ScaleSetting2"
+ScaleSetting2.Scale = 1
+wait(0.05)
+
+local H = Instance.new("TextButton")
+H.Parent = SFrame
+H.Name = "H"
+H.Visible = true
+H.Position = UDim2.new(0.096, 0, 0.218, 0)
+H.Size = UDim2.new(0, 79, 0, 15) 
+local backgroundColor6 = BrickColor.new(Color3.fromHSV(0.650083, 0.709804, 1))
+H.BackgroundColor = backgroundColor6
+H.BackgroundColor3 = Color3.new(0.290196, 0.372549, 1)
+H.BorderSizePixel = 1
+local Textlabel4 = H
+Textlabel4.Font = font
+H.TextColor3 = Color3.new(0, 0, 0)
+H.Text = "Heal"
+H.TextScaled = true
+H.MouseButton1Click:Connect(function(player,Health,Hunger,PlrToChange)
+	local ff = Instance.new("ForceField")
+	ff.Parent = game.Players.LocalPlayer
+	ff.Visible = false
+end)
+
+wait(0.05)
+local J = Instance.new("TextButton")
+J.Parent = SFrame
+J.Name = "J"
+J.Visible = true
+J.Position = UDim2.new(0.096, 0, 0.031, 0)
+J.Size = UDim2.new(0, 79, 0, 15)
+local backgroundColor7 = BrickColor.new(Color3.fromHSV(0.608333, 0.862745, 1))
+J.BackgroundColor = backgroundColor7
+J.BackgroundColor3 = Color3.new(0.137255, 0.439216, 1)
+J.BorderSizePixel = 1
+local Textlabel5 = J
+Textlabel5.Font = font
+J.TextColor3 = Color3.new(0, 0, 0)
+J.Text = "Hotkey"
+J.TextScaled = true
+wait(0.05)
+local O = Instance.new("TextButton")
+O.Parent = SFrame
+O.Name = "O"
+O.Visible = true
+O.Position = UDim2.new(0.096, 0, 0.302, 0)
+O.Size = UDim2.new(0, 79, 0, 15)
+local backgroundColor8 = BrickColor.new(Color3.fromHSV(0.635917, 0.658824, 1))
+O.BackgroundColor = backgroundColor8
+O.BackgroundColor3 = Color3.new(0.341176, 0.47451, 1)
+O.BorderSizePixel = 1
+local Textlabel6 = O
+Textlabel6.Font = font
+O.TextColor3 = Color3.new(0, 0, 0)
+O.Text = "Get tools (CLIENT)"
+O.TextScaled = true
+O.MouseButton1Click:Connect(function()
+	local tools = game.ReplicatedStorage:GetChildren()
+	while #tools == 0 do
+		wait(0.01)
+		O.Text = "No tools you can get :("
+	end
+	for _, tool in ipairs(tools) do
+		if tool:IsA("Tool") then
+			-- Clone the tool and add it to the player's inventory
+			local clonedTool = tool:Clone()
+			clonedTool.Parent = game.Players.LocalPlayer.Backpack
+		print("Cloned tools")
+		end
+	end
+
+end)
+
+wait(0.05)
+local Y = Instance.new("TextButton")
+Y.Parent = SFrame
+Y.Name = "Y"
+Y.Visible = true
+Y.Position = UDim2.new(0.096, 0, 0.118, 0)
+Y.Size = UDim2.new(0, 79, 0, 15)
+local backgroundColor9 = BrickColor.new(Color3.fromHSV(0.6725, 0.898039, 1))
+Y.BackgroundColor = backgroundColor9
+Y.BackgroundColor3 = Color3.new(0.133333, 0.101961, 1)
+Y.BorderSizePixel = 1
+local Textlabel7 = Y
+Textlabel7.Font = font
+Y.TextColor3 = Color3.new(0, 0, 0)
+Y.Text = "Awaken"
+Y.TextScaled = true
+wait(0.05)
+
+local F = Instance.new("TextButton")
+F.Parent = SFrame
+F.Name = "F"
+F.Visible = true
+F.Position = UDim2.new(0.096, 0, 0.497, 0)
+F.Size = UDim2.new(0, 79, 0, 15)
+local backgroundColor9 = BrickColor.new(Color3.fromHSV(0.6725, 0.898039, 1))
+F.BackgroundColor = backgroundColor9
+F.BackgroundColor3 = Color3.new(0.305882, 0.376471, 1)
+F.BorderSizePixel = 1
+local Textlabel11 = F
+Textlabel11.Font = font
+F.TextColor3 = Color3.new(0, 0, 0)
+F.Text = "Space?!"
+F.TextScaled = true
+F.MouseButton1Click:Connect(function()
+	local randomPart = Instance.new("Part")
+	randomPart.Size = Vector3.new(2, 0.45, 2)
+	randomPart.Color = Color3.new(0, 0.0509804, 1)
+	randomPart.Anchored = true
+	randomPart.CanCollide = true
+	randomPart.Transparency = 1
+
+	local randomRootPart = character:WaitForChild("HumanoidRootPart")
+	randomPart.Parent = randomRootPart
+	randomPart.CFrame = randomRootPart.CFrame + Vector3.new(0, math.random(1, 5), 0)
+
+	local randomBodyAngularVelocity = Instance.new("BodyAngularVelocity")
+	randomBodyAngularVelocity.MaxTorque = Vector3.new(math.random(), math.random(), math.random()) -- Set the maximum torque
+	randomBodyAngularVelocity.AngularVelocity = Vector3.new(0, math.random(500, 1500), 0) -- Set the angular velocity
+
+	randomBodyAngularVelocity.Parent = randomPart
+
+	local randomConnection
+	randomConnection = game:GetService("RunService").RenderStepped:Connect(function()
+		local randomOffset = Vector3.new(0, math.random(-3, -3), 0) -- Calculate a random offset above the player's head
+		randomPart.CFrame = randomRootPart.CFrame + randomOffset -- Update the part's CFrame
+	end)
+
+	character.AncestryChanged:Connect(function()
+		if not character.Parent then
+			randomConnection:Disconnect()
+		end
+	end)
+	print("float created")
+end)
+wait(0.05)
+
+local L = Instance.new("TextButton")
+L.Parent = SFrame
+L.Name = "L"
+L.Visible = true
+L.Position = UDim2.new(0.096, 0, 0.597, 0)
+L.Size = UDim2.new(0, 79, 0, 15)
+local backgroundColor9 = BrickColor.new(Color3.fromHSV(0.6725, 0.898039, 1))
+L.BackgroundColor = backgroundColor9
+L.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 1)
+L.BorderSizePixel = 1
+local Textlabel12 = L
+Textlabel12.Font = font
+L.TextColor3 = Color3.new(0, 0, 0)
+L.Text = "Fling Pet"
+L.TextScaled = true
+L.MouseButton1Click:Connect(function()
+	local hoverPart = Instance.new("Part")
+	hoverPart.Size = Vector3.new(2, 1, 4)
+	hoverPart.Color = Color3.new(0.533333, 0.533333, 0.533333)
+	hoverPart.Anchored = false
+	hoverPart.CanCollide = true
+	hoverPart.Transparency = 0
+
+	local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+	hoverPart.Parent = humanoidRootPart
+	hoverPart.CFrame = humanoidRootPart.CFrame + Vector3.new(2.5, 3, 0)
+
+	local bodyAngularVelocity = Instance.new("BodyAngularVelocity")
+	bodyAngularVelocity.MaxTorque = Vector3.new(math.huge, math.huge, math.huge)
+	bodyAngularVelocity.AngularVelocity = Vector3.new(0, 10000, 0)
+
+	bodyAngularVelocity.Parent = hoverPart
+
+	local connection
+	connection = game:GetService("RunService").RenderStepped:Connect(function()
+		local angle = math.rad(tick() * 1000) 
+		local radius = 3
+		local offset = Vector3.new(math.random(3, 3), math.random(1, 1), math.random(3, 3)) -- Calculate a random offset
+		hoverPart.CFrame = humanoidRootPart.CFrame + offset -- Update the part's CFrame
+	end)
+
+	character.AncestryChanged:Connect(function()
+		if not character.Parent then
+			connection:Disconnect()
+		end
+	end)
+
+	print("fling pet created")
+end)
+wait(0.05)
+
+
+local E = Instance.new("TextButton")
+local ObservationDark = Instance.new("Frame")
+ObservationDark.Name = "ObservationDark"
+ObservationDark.BackgroundColor3 = Color3.new(0.172549, 0.160784, 0.160784)
+ObservationDark.Size = UDim2.new(0,  935, 0, 438)
+ObservationDark.Position = UDim2.new(-3.4, 0, -0.872, 0)
+ObservationDark.Visible = false
+ObservationDark.Transparency = 0.65
+ObservationDark.Parent = plr
+E.Parent = SFrame
+E.Name = "E"
+E.Visible = true
+E.Position = UDim2.new(0.096, 0, 0.396, 0)
+E.Size = UDim2.new(0, 79, 0, 15)
+local backgroundColor9 = BrickColor.new(Color3.fromHSV(0.644389, 0.85098, 1))
+E.BackgroundColor = backgroundColor9
+E.BackgroundColor3 = Color3.new(0.14902, 0.262745, 1)
+E.BorderSizePixel = 1
+local Textlabel8 = E
+Textlabel8.Font = font
+E.TextColor3 = Color3.new(0, 0, 0)
+E.Text = "Observation"
+E.TextScaled = true
+E.MouseButton1Click:Connect(function()
+	ObservationEX.Visible = true
+	wait(0.05)
+	ObservationEX.Visible = false
+	local players = game.Players:GetPlayers()
+local isVisible = false
+	for i,v in pairs(players) do
+		local esp = Instance.new("Highlight")
+		esp.Name = v.Name
+		esp.FillTransparency = 0.55
+		esp.FillColor = Color3.new(0.0666667, 0, 1)
+		esp.OutlineColor = Color3.new(1, 1, 1)
+		esp.OutlineTransparency = 0
+		esp.Parent = v.Character
+		print("ObservationPressed")
+	end
+	ObservationDark.Visible = true
+	isVisible = not isVisible
+
+	ObservationDark.Visible = isVisible
+end)
+
+print("ObservationLoaded")
+
+wait(0.05)
+local Credits = Instance.new("ImageButton")
+Credits.Parent = Client
+Credits.Name = "Credits"
+Credits.Visible = true
+Credits.Position = UDim2.new(0.85, 0, 0.879, 0)
+Credits.Size = UDim2.new(0, 18, 0, 18)
+Credits.Image = "http://www.roblox.com/asset/?id=12781247140"
+local backgroundColor10 = BrickColor.new(Color3.fromHSV(0.807222, 0.976471, 1))
+Credits.BackgroundColor = backgroundColor10
+Credits.BackgroundColor3 = Color3.new(0.835294, 0.0235294, 1)
+Credits.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+Credits.BorderSizePixel = 2
+local guii = Credits.Parent.Creds
+guii.Visible = false
+
+Credits.MouseButton1Click:Connect(function()
+	guii.Visible = true
+end)
+wait(0.05)
+local Close = Instance.new("TextButton")
+Close.Parent = Client
+Close.Visible = true
+Close.Name = "Close"
+Close.Position = UDim2.new(0.867, 0, 0, 0)
+Close.Size = UDim2.new(0, 16, 0, 15) 
+local backgroundColor11 = BrickColor.new(Color3.fromHSV(0.568917, 0.635294, 1))
+Close.BackgroundColor = backgroundColor11
+Close.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+Close.BackgroundColor3 = Color3.new(0.364706, 0.745098, 1)
+Close.BorderSizePixel = 1
+local Textlabel9 = Close
+Textlabel9.Font = font
+Close.TextColor3 = Color3.new(0, 0, 0)
+Close.Text = "X"
+Close.TextScaled = true
+Close.MouseButton1Click:Connect(function()
+	Close.Parent.Parent:Destroy()
+	print("Aquamarine Hub is now Closed")
+end)
+wait(0.05)
+local Title = Instance.new("TextLabel")
+Title.Parent = Client
+Title.Name = "Title"
+Title.Visible = true
+Title.Position = UDim2.new(-0.001, 0, 0, 0)
+Title.Size = UDim2.new(0, 85, 0, 15)
+local backgroundColor12 = BrickColor.new(Color3.fromHSV(0.672389, 0.8, 1))
+Title.BackgroundColor = backgroundColor12
+Title.BackgroundColor3 = Color3.new(0.227451, 0.2, 1)
+Title.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+Title.BorderSizePixel = 2 
+Title.TextColor3 = Color3.new(0, 0, 0)
+local Textlabel10 = Title
+Textlabel10.Font = font
+Title.Text = "Aquamarine Lite"
+Title.TextScaled = true
+
+print("Aquamarine Hub is now loaded in..")
+wait(0.05)
+local LS = Instance.new("LocalScript")
+LS.Parent = AquamarineHub:WaitForChild("Client")
+LS.Name = "MovingGui"
+
+local gui = AquamarineHub:WaitForChild("Client")
+local dragging = false
+local offsetX, offsetY = 0, 0
+
+local function handleMouse(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton1 then
+		if input.UserInputState == Enum.UserInputState.Begin then
+			local mousePos = input.Position
+			if mousePos.X >= gui.AbsolutePosition.X and mousePos.X <= gui.AbsolutePosition.X + gui.AbsoluteSize.X and
+				mousePos.Y >= gui.AbsolutePosition.Y and mousePos.Y <= gui.AbsolutePosition.Y + gui.AbsoluteSize.Y then
+				dragging = true
+				offsetX = mousePos.X - gui.AbsolutePosition.X
+				offsetY = mousePos.Y - gui.AbsolutePosition.Y
+			end
+		elseif input.UserInputState == Enum.UserInputState.End then
+			dragging = false
+		end
+	elseif input.UserInputType == Enum.UserInputType.MouseMovement and dragging then
+		gui.Position = UDim2.new(0, input.Position.X - offsetX, 0, input.Position.Y - offsetY)
+	end
+end
+
+gui.InputBegan:Connect(handleMouse)
+gui.InputChanged:Connect(handleMouse)
+gui.InputEnded:Connect(handleMouse)
+
+wait(3)
+print("starting load gui invis")
+
+
+while AquamarinLiteLoad.Transparency < 1 do
+	AquamarinLiteLoad.Transparency = AquamarinLiteLoad.Transparency + 0.1
+	wait(0.1)
+	print("changing transparency")
+	AquamarineLiteHandle2.Text = "Loading.  "
+	task.wait(0.2)
+	AquamarinLiteLoad.Transparency = AquamarinLiteLoad.Transparency + 0.1
+	wait(0.1)
+	AquamarineLiteHandle2.Text = "Loading.. "
+	task.wait(0.2)
+	AquamarinLiteLoad.Transparency = AquamarinLiteLoad.Transparency + 0.1
+	wait(0.1)
+	AquamarineLiteHandle2.Text = "Loading..."
+	task.wait(0.2)
+	AquamarinLiteLoad.Transparency = AquamarinLiteLoad.Transparency + 0.1
+	wait(0.1)
+	if AquamarinLiteLoad.Transparency > 0.9 then
+		print("Destroying Loading System")
+		AquamarinLiteLoad:Destroy()
+		AquamarineLiteHandle:Destroy()
+		AquamarineLiteHandle2:Destroy()
+	end
+end
+
+
+
+
+
+
+wait(0.05)
+print("You can move the Gui now.")
+
+J.MouseButton1Click:Connect(function()
+	print("hotkey activated")
+	local character = plrrr.Character or plrrr.CharacterAdded:Wait()
+
+	local function onEntered(otherPart)
+		local range = 100 -- Change this value to adjust the range
+		local otherHumanoid = otherPart.Parent:FindFirstChildOfClass("Humanoid")
+		if otherHumanoid then
+			local distance = (otherPart.Position - character.HumanoidRootPart.Position).Magnitude
+			while distance <= range do
+				wait(0.05)
+				character:Click()
+				print("clicked")
+			end
+		end
+	end
+
+	local function onPartAdded(part)
+		local range = 10 -- Change this value to adjust the range
+		if part:IsA("BasePart") and part.Name == "HumanoidRootPart" then
+			part.Touched:Connect(function(otherPart)
+				onEntered(otherPart, range)
+			end)
+		end
+	end
+
+	for _, part in pairs(character:GetDescendants()) do
+		local range = 10
+		if part:IsA("BasePart") and part.Name == "HumanoidRootPart" then
+			part.Touched:Connect(function(otherPart)
+				onEntered(otherPart, range)
+			end)
+		end
+	end
+
+	character.DescendantAdded:Connect(onPartAdded)
+end)
